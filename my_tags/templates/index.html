@@ -1,0 +1,31 @@
+{% extends "base.html"%}
+{% load static %}
+{% block title%} Learning Django templates {% endblock title%}
+
+{% block content %}
+<h2>{{ x }}</h2>
+{% comment %} Django template tags {% endcomment %}
+{% comment %} {% tag_name argument1 argument2 %}{% endtag_name %} {% endcomment %}
+
+{% comment %} {% if user.authenticated %}
+    Welcome, {{ user.username }}!
+{% else %}
+    please log in to access
+{% endif %} {% endcomment %}
+
+{% comment %} For tag {% endcomment %}
+
+<ul>
+    {% for item in items%}
+    <li>{{ item }}</li>
+    {% endfor %}
+</ul>
+
+    <img src="{% static 'images/All For God.jpg' %}" width="400" height="400" alt="image.png">
+
+{% comment %} Block {% endcomment %}
+{% comment %} {% block title %}
+Django Template tags
+{% endblock title%} {% endcomment %}
+
+{% endblock content%}
